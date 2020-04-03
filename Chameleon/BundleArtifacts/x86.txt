@@ -1,0 +1,2 @@
+MainPackage=C:\Chameleon\Chameleon\bin\x86\Release\Chameleon_1.0.10.0_x86.msix
+SymbolPackage=C:\Chameleon\Chameleon\AppPackages\Chameleon_1.0.10.0_Test\Chameleon_1.0.10.0_x86.appxsym

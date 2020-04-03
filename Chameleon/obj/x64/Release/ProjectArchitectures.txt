@@ -1,0 +1,1 @@
+C:\Chameleon\Chameleon\Chameleon.csproj;x64

@@ -1,0 +1,506 @@
+﻿<Page
+    x:Class="Chameleon.CombinationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Chameleon"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background = "#FF1B1919">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Column="1" Fill="#FF262626"/>
+
+        <Border 
+            HorizontalAlignment="Center" 
+            Height="120" 
+            Padding="25,0,20,0"
+            Margin="0,20,0,0"
+            VerticalAlignment="Top" 
+            BorderThickness="5"
+            BorderBrush="#FF1B1919"
+            Width="730">
+            <TextBlock  
+            FontSize="16" 
+            Foreground="White"
+            TextWrapping="Wrap" 
+            FontStyle="Italic"
+            Text="
+                
+                
+                
+                
+                
+                
+                
+                
+            Выберите из предложенного списка цвет, к которому нужно подобрать сочетание"/>
+        </Border>
+
+        <StackPanel 
+            x:Name="StackPanel1" 
+            Grid.Column="1" 
+            Margin="49.6,30,60,0" 
+            Orientation="Vertical"
+            Padding="0,0,0,0"
+            Background="#FF262626">
+
+            <Border 
+                x:Name="Border1" 
+                Height="50" 
+                Margin="0,0,20,0"
+                HorizontalAlignment="Stretch">
+                <RadioButton x:Name="primo" Margin="20,5,0,0" GroupName="Choice" Checked = "RadioButton_Checked" IsChecked="True" >
+
+                    <TextBlock Foreground="White" FontStyle="Italic" FontSize="16" Margin="0,0,0,12">Триадная схема</TextBlock>
+                </RadioButton>
+            </Border>
+
+            <Border   
+                x:Name="Border2" 
+                Height="50" 
+                Margin="0,0,20,0"
+                HorizontalAlignment="Stretch">
+                <RadioButton x:Name="secondo" Margin="20,5,0,0" GroupName="Choice" Checked = "RadioButton_Checked">
+                    <TextBlock Foreground ="White" FontStyle="Italic" FontSize="16" Margin="0,0,0,12">Комплементарная триадная схема</TextBlock>
+                </RadioButton>
+            </Border>
+
+            <Border   
+                x:Name="Border3" 
+                Height="50" 
+                Margin="0,0,20,0"
+                HorizontalAlignment="Stretch">
+                <RadioButton x:Name="terzo" Margin="20,5,0,0" GroupName="Choice" Checked = "RadioButton_Checked">
+                    <TextBlock Foreground ="White" FontStyle="Italic" FontSize="16" Margin="0,0,0,12">Двойная разделённая схема</TextBlock>
+                </RadioButton>
+            </Border>
+
+            <Border   
+                x:Name="Border4" 
+                Height="50" 
+                Margin="0,0,20,0"
+                HorizontalAlignment="Stretch">
+                <RadioButton x:Name="quarto" Margin="20,5,0,0" GroupName="Choice" Checked = "RadioButton_Checked">
+                    <TextBlock Foreground ="White" FontStyle="Italic" FontSize="16" Margin="0,0,0,12">Аналоговая схема</TextBlock>
+                </RadioButton>
+            </Border>
+
+            <Border   
+                x:Name="Border5" 
+                Height="10" 
+                Margin="0,0,0,0"
+                HorizontalAlignment="Stretch">
+            </Border>
+
+            <Border   
+                x:Name="ColorMain" 
+                Height="156" 
+                Margin="20,0,20,0"
+                Background="#FFFFFFCC"
+                HorizontalAlignment="Stretch">
+                <TextBlock
+                    x:Name="TextBlock1"
+                    Grid.Column="1"
+                    Text="#FFFFFFCC"
+                    Width="195" 
+                    Height="30"
+                    Margin="60,10,0,10"
+                    Foreground="Black"
+                    FontStyle="Italic" 
+                    FontSize="16"/>
+            </Border>
+
+            <Border   
+                x:Name="Color1" 
+                Height="85" 
+                Margin="20,0,20,0"
+                Background="#FFFFCCCC"
+                HorizontalAlignment="Stretch">
+                <TextBlock
+                    x:Name="TextBlock2"
+                    Grid.Column="1"
+                    Text="#FFFFCCCC"
+                    Width="195" 
+                    Height="30"
+                    Margin="60,10,0,10"
+                    Foreground="Black"
+                    FontStyle="Italic" 
+                    FontSize="16"/>
+            </Border>
+
+            <Border   
+                x:Name="Color2" 
+                Height="85" 
+                Margin="20,0,20,0"
+                Background="#FF9999CC"
+                HorizontalAlignment="Stretch">
+                <TextBlock
+                    x:Name="TextBlock3"
+                    Grid.Column="1"
+                    Text="#FF9999CC"
+                    Width="195" 
+                    Height="30"
+                    Margin="60,10,0,10"
+                    Foreground="Black"
+                    FontStyle="Italic" 
+                    FontSize="16"/>
+            </Border>
+
+            <Border   
+                x:Name="Color3" 
+                Height="85" 
+                Margin="20,0,20,0"
+                Background="#FF262626"
+                HorizontalAlignment="Stretch">
+                <TextBlock
+                    x:Name="TextBlock4"
+                    Grid.Column="1"
+                    Text=""
+                    Width="195" 
+                    Height="30"
+                    Margin="60,10,0,10"
+                    Foreground="Black"
+                    FontStyle="Italic" 
+                    FontSize="16"/>
+            </Border>
+
+        </StackPanel>
+
+        <ScrollViewer Grid.Column="0" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" Height="540" Width="669">
+            <StackPanel>
+
+                <StackPanel x:Name="S1" Orientation="Horizontal">
+                    <Button x:Name="b1" Width="110" Height="60" Background="#FFFFFFCC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click11" Foreground="Black">#FFFFFFCC</Button>
+                    <Button Width="110" Height="60" Background="#FFFFFF99" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click12" Foreground="Black">#FFFFFF99</Button>
+                    <Button Width="110" Height="60" Background="#FFFFFF66" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click13" Foreground="Black">#FFFFFF66</Button>
+                    <Button Width="110" Height="60" Background="#FFFFFF33" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click14" Foreground="Black">#FFFFFF33</Button>
+                    <Button Width="110" Height="60" Background="#FFFFFF00" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click15" Foreground="Black">#FFFFFF00</Button>
+                    <Button Width="110" Height="60" Background="#FFCCCC00" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click16" Foreground="Black">#FFCCCC00</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S2" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFFFCC66" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click21" Foreground="Black" >#FFFFCC66</Button>
+                    <Button Width="110" Height="60" Background="#FFFFCC00" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click22" Foreground="Black" >#FFFFCC00</Button>
+                    <Button Width="110" Height="60" Background="#FFFFCC33" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click23" Foreground="Black" >#FFFFCC33</Button>
+                    <Button Width="110" Height="60" Background="#FFCC9900" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click24" Foreground="Black" >#FFCC9900</Button>
+                    <Button Width="110" Height="60" Background="#FFCC9933" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click25" Foreground="Black" >#FFCC9933</Button>
+                    <Button Width="110" Height="60" Background="#FF996600" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click26" Foreground="Black" >#FF996600</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S3" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFFF9900" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click31" Foreground="Black">#FFFF9900</Button>
+                    <Button Width="110" Height="60" Background="#FFFF9933" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click32" Foreground="Black">#FFFF9933</Button>
+                    <Button Width="110" Height="60" Background="#FFCC9966" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click33" Foreground="Black">#FFCC9966</Button>
+                    <Button Width="110" Height="60" Background="#FFCC6600" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click34" Foreground="Black">#FFCC6600</Button>
+                    <Button Width="110" Height="60" Background="#FF996633" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click35" Foreground="Black">#FF996633</Button>
+                    <Button Width="110" Height="60" Background="#FF663300" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click36" Foreground="Black">#FF663300</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S4" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFFFCC99" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click41" Foreground="Black">#FFFFCC99</Button>
+                    <Button Width="110" Height="60" Background="#FFFF9966" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click42" Foreground="Black">#FFFF9966</Button>
+                    <Button Width="110" Height="60" Background="#FFFF6600" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click43" Foreground="Black">#FFFF6600</Button>
+                    <Button Width="110" Height="60" Background="#FFCC6633" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click44" Foreground="Black">#FFCC6633</Button>
+                    <Button Width="110" Height="60" Background="#FF993300" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click45" Foreground="Black">#FF993300</Button>
+                    <Button Width="110" Height="60" Background="#FF660000" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click46" Foreground="Black">#FF660000</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S5" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFFF6633" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click51" Foreground="Black">#FFFF6633</Button>
+                    <Button Width="110" Height="60" Background="#FFCC3300" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click52" Foreground="Black">#FFCC3300</Button>
+                    <Button Width="110" Height="60" Background="#FFFF3300" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click53" Foreground="Black">#FFFF3300</Button>
+                    <Button Width="110" Height="60" Background="#FFFF0000" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click54" Foreground="Black">#FFFF0000</Button>
+                    <Button Width="110" Height="60" Background="#FFCC0000" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click55" Foreground="Black">#FFCC0000</Button>
+                    <Button Width="110" Height="60" Background="#FF990000" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click56" Foreground="Black">#FF990000</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S6" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFFFCCCC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click61" Foreground="Black">#FFFFCCCC</Button>
+                    <Button Width="110" Height="60" Background="#FFFF9999" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click62" Foreground="Black">#FFFF9999</Button>
+                    <Button Width="110" Height="60" Background="#FFFF6666" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click63" Foreground="Black">#FFFF6666</Button>
+                    <Button Width="110" Height="60" Background="#FFFF3333" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click64" Foreground="Black">#FFFF3333</Button>
+                    <Button Width="110" Height="60" Background="#FFFF0033" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click65" Foreground="Black">#FFFF0033</Button>
+                    <Button Width="110" Height="60" Background="#FFCC0033" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click66" Foreground="Black">#FFCC0033</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S7" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFCC9999" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click71" Foreground="Black">#FFCC9999</Button>
+                    <Button Width="110" Height="60" Background="#FFCC6666" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click72" Foreground="Black">#FFCC6666</Button>
+                    <Button Width="110" Height="60" Background="#FFCC3333" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click73" Foreground="Black">#FFCC3333</Button>
+                    <Button Width="110" Height="60" Background="#FF993333" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click74" Foreground="Black">#FF993333</Button>
+                    <Button Width="110" Height="60" Background="#FF990033" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click75" Foreground="Black">#FF990033</Button>
+                    <Button Width="110" Height="60" Background="#FF330000" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click76" Foreground="White">#FF330000</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S8" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFFF6699" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click81" Foreground="Black">#FFFF6699</Button>
+                    <Button Width="110" Height="60" Background="#FFFF3366" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click82" Foreground="Black">#FFFF3366</Button>
+                    <Button Width="110" Height="60" Background="#FFFF0066" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click83" Foreground="Black">#FFFF0066</Button>
+                    <Button Width="110" Height="60" Background="#FFCC3366" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click84" Foreground="Black">#FFCC3366</Button>
+                    <Button Width="110" Height="60" Background="#FF996666" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click85" Foreground="Black">#FF996666</Button>
+                    <Button Width="110" Height="60" Background="#FF663333" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click86" Foreground="Black">#FF663333</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S9" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFFF99CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click91" Foreground="Black">#FFFF99CC</Button>
+                    <Button Width="110" Height="60" Background="#FFFF3399" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click92" Foreground="Black">#FFFF3399</Button>
+                    <Button Width="110" Height="60" Background="#FFFF0099" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click93" Foreground="Black">#FFFF0099</Button>
+                    <Button Width="110" Height="60" Background="#FFCC0066" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click94" Foreground="Black">#FFCC0066</Button>
+                    <Button Width="110" Height="60" Background="#FF993366" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click95" Foreground="Black">#FF993366</Button>
+                    <Button Width="110" Height="60" Background="#FF660033" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click96" Foreground="Black">#FF660033</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S10" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFFF66CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click101" Foreground="Black">#FFFF66CC</Button>
+                    <Button Width="110" Height="60" Background="#FFFF00CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click102" Foreground="Black">#FFFF00CC</Button>
+                    <Button Width="110" Height="60" Background="#FFFF33CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click103" Foreground="Black">#FFFF33CC</Button>
+                    <Button Width="110" Height="60" Background="#FFCC6699" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click104" Foreground="Black">#FFCC6699</Button>
+                    <Button Width="110" Height="60" Background="#FFCC0099" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click105" Foreground="Black">#FFCC0099</Button>
+                    <Button Width="110" Height="60" Background="#FF990066" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click106" Foreground="Black">#FF990066</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S11" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFFFCCFF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click111" Foreground="Black">#FFFFCCFF</Button>
+                    <Button Width="110" Height="60" Background="#FFFF99FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click112" Foreground="Black">#FFFF99FF</Button>
+                    <Button Width="110" Height="60" Background="#FFFF66FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click113" Foreground="Black">#FFFF66FF</Button>
+                    <Button Width="110" Height="60" Background="#FFFF33FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click114" Foreground="Black">#FFFF33FF</Button>
+                    <Button Width="110" Height="60" Background="#FFFF00FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click115" Foreground="Black">#FFFF00FF</Button>
+                    <Button Width="110" Height="60" Background="#FFCC3399" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click116" Foreground="Black">#FFCC3399</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S12" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFCC99CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click121" Foreground="Black">#FFCC99CC</Button>
+                    <Button Width="110" Height="60" Background="#FFCC66CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click122" Foreground="Black">#FFCC66CC</Button>
+                    <Button Width="110" Height="60" Background="#FFCC00CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click123" Foreground="Black">#FFCC00CC</Button>
+                    <Button Width="110" Height="60" Background="#FFCC33CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click124" Foreground="Black">#FFCC33CC</Button>
+                    <Button Width="110" Height="60" Background="#FF990099" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click125" Foreground="Black">#FF990099</Button>
+                    <Button Width="110" Height="60" Background="#FF993399" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click126" Foreground="Black">#FF993399</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S13" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFCC66FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click131" Foreground="Black">#FFCC66FF</Button>
+                    <Button Width="110" Height="60" Background="#FFCC33FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click132" Foreground="Black">#FFCC33FF</Button>
+                    <Button Width="110" Height="60" Background="#FFCC00FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click133" Foreground="Black">#FFCC00FF</Button>
+                    <Button Width="110" Height="60" Background="#FF9900CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click134" Foreground="Black">#FF9900CC</Button>
+                    <Button Width="110" Height="60" Background="#FF996699" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click135" Foreground="Black">#FF996699</Button>
+                    <Button Width="110" Height="60" Background="#FF660066" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click136" Foreground="Black">#FF660066</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S14" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFCC99FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click141" Foreground="Black">#FFCC99FF</Button>
+                    <Button Width="110" Height="60" Background="#FF9933CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click142" Foreground="Black">#FF9933CC</Button>
+                    <Button Width="110" Height="60" Background="#FF9933FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click143" Foreground="Black">#FF9933FF</Button>
+                    <Button Width="110" Height="60" Background="#FF9900FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click144" Foreground="Black">#FF9900FF</Button>
+                    <Button Width="110" Height="60" Background="#FF660099" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click145" Foreground="Black">#FF660099</Button>
+                    <Button Width="110" Height="60" Background="#FF663366" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click146" Foreground="Black">#FF663366</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S15" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF9966CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click151" Foreground="Black">#FF9966CC</Button>
+                    <Button Width="110" Height="60" Background="#FF9966FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click152" Foreground="Black">#FF9966FF</Button>
+                    <Button Width="110" Height="60" Background="#FF6600CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click153" Foreground="Black">#FF6600CC</Button>
+                    <Button Width="110" Height="60" Background="#FF6633CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click154" Foreground="Black">#FF6633CC</Button>
+                    <Button Width="110" Height="60" Background="#FF663399" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click155" Foreground="Black">#FF663399</Button>
+                    <Button Width="110" Height="60" Background="#FF330033" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click156" Foreground="White">#FF330033</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S16" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFCCCCFF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click161" Foreground="Black">#FFCCCCFF</Button>
+                    <Button Width="110" Height="60" Background="#FF9999FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click162" Foreground="Black">#FF9999FF</Button>
+                    <Button Width="110" Height="60" Background="#FF6633FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click163" Foreground="Black">#FF6633FF</Button>
+                    <Button Width="110" Height="60" Background="#FF6600FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click164" Foreground="Black">#FF6600FF</Button>
+                    <Button Width="110" Height="60" Background="#FF330099" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click165" Foreground="Black">#FF330099</Button>
+                    <Button Width="110" Height="60" Background="#FF330066" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click166" Foreground="Black">#FF330066</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S17" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF9999CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click171" Foreground="Black">#FF9999CC</Button>
+                    <Button Width="110" Height="60" Background="#FF6666FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click172" Foreground="Black">#FF6666FF</Button>
+                    <Button Width="110" Height="60" Background="#FF6666CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click173" Foreground="Black">#FF6666CC</Button>
+                    <Button Width="110" Height="60" Background="#FF666699" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click174" Foreground="Black">#FF666699</Button>
+                    <Button Width="110" Height="60" Background="#FF333399" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click175" Foreground="Black">#FF333399</Button>
+                    <Button Width="110" Height="60" Background="#FF333366" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click176" Foreground="Black">#FF333366</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S18" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF3333FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click181" Foreground="Black">#FF3333FF</Button>
+                    <Button Width="110" Height="60" Background="#FF3300FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click182" Foreground="Black">#FF3300FF</Button>
+                    <Button Width="110" Height="60" Background="#FF3300CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click183" Foreground="Black">#FF3300CC</Button>
+                    <Button Width="110" Height="60" Background="#FF3333CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click184" Foreground="Black">#FF3333CC</Button>
+                    <Button Width="110" Height="60" Background="#FF000099" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click185" Foreground="Black">#FF000099</Button>
+                    <Button Width="110" Height="60" Background="#FF000066" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click186" Foreground="Black">#FF000066</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S19" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF6699FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click191" Foreground="Black">#FF6699FF</Button>
+                    <Button Width="110" Height="60" Background="#FF3366FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click192" Foreground="Black">#FF3366FF</Button>
+                    <Button Width="110" Height="60" Background="#FF0000FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click193" Foreground="Black">#FF0000FF</Button>
+                    <Button Width="110" Height="60" Background="#FF0000CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click194" Foreground="Black">#FF0000CC</Button>
+                    <Button Width="110" Height="60" Background="#FF0033CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click195" Foreground="Black">#FF0033CC</Button>
+                    <Button Width="110" Height="60" Background="#FF000033" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click196" Foreground="White">#FF000033</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S20" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF0066FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click201" Foreground="Black">#FF0066FF</Button>
+                    <Button Width="110" Height="60" Background="#FF0066CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click202" Foreground="Black">#FF0066CC</Button>
+                    <Button Width="110" Height="60" Background="#FF3366CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click203" Foreground="Black">#FF3366CC</Button>
+                    <Button Width="110" Height="60" Background="#FF0033FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click204" Foreground="Black">#FF0033FF</Button>
+                    <Button Width="110" Height="60" Background="#FF003399" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click205" Foreground="Black">#FF003399</Button>
+                    <Button Width="110" Height="60" Background="#FF003366" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click206" Foreground="Black">#FF003366</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S21" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF99CCFF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click211" Foreground="Black">#FF99CCFF</Button>
+                    <Button Width="110" Height="60" Background="#FF3399FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click212" Foreground="Black">#FF3399FF</Button>
+                    <Button Width="110" Height="60" Background="#FF0099FF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click213" Foreground="Black">#FF0099FF</Button>
+                    <Button Width="110" Height="60" Background="#FF6699CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click214" Foreground="Black">#FF6699CC</Button>
+                    <Button Width="110" Height="60" Background="#FF336699" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click215" Foreground="Black">#FF336699</Button>
+                    <Button Width="110" Height="60" Background="#FF006699" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click216" Foreground="Black">#FF006699</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S22" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF66CCFF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click221" Foreground="Black">#FF66CCFF</Button>
+                    <Button Width="110" Height="60" Background="#FF33CCFF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click222" Foreground="Black">#FF33CCFF</Button>
+                    <Button Width="110" Height="60" Background="#FF00CCFF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click223" Foreground="Black">#FF00CCFF</Button>
+                    <Button Width="110" Height="60" Background="#FF3399CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click224" Foreground="Black">#FF3399CC</Button>
+                    <Button Width="110" Height="60" Background="#FF0099CC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click225" Foreground="Black">#FF0099CC</Button>
+                    <Button Width="110" Height="60" Background="#FF003333" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click226" Foreground="White">#FF003333</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S23" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF99CCCC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click231" Foreground="Black">#FF99CCCC</Button>
+                    <Button Width="110" Height="60" Background="#FF66CCCC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click232" Foreground="Black">#FF66CCCC</Button>
+                    <Button Width="110" Height="60" Background="#FF339999" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click233" Foreground="Black">#FF339999</Button>
+                    <Button Width="110" Height="60" Background="#FF669999" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click234" Foreground="Black">#FF669999</Button>
+                    <Button Width="110" Height="60" Background="#FF006666" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click235" Foreground="Black">#FF006666</Button>
+                    <Button Width="110" Height="60" Background="#FF336666" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click236" Foreground="Black">#FF336666</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S24" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFCCFFFF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click241" Foreground="Black">#FFCCFFFF</Button>
+                    <Button Width="110" Height="60" Background="#FF99FFFF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click242" Foreground="Black">#FF99FFFF</Button>
+                    <Button Width="110" Height="60" Background="#FF66FFFF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click243" Foreground="Black">#FF66FFFF</Button>
+                    <Button Width="110" Height="60" Background="#FF33FFFF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click244" Foreground="Black">#FF33FFFF</Button>
+                    <Button Width="110" Height="60" Background="#FF00FFFF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click245" Foreground="Black">#FF00FFFF</Button>
+                    <Button Width="110" Height="60" Background="#FF00CCCC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click246" Foreground="Black">#FF00CCCC</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S25" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF99FFCC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click251" Foreground="Black">#FF99FFCC</Button>
+                    <Button Width="110" Height="60" Background="#FF66FFCC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click252" Foreground="Black">#FF66FFCC</Button>
+                    <Button Width="110" Height="60" Background="#FF33FFCC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click253" Foreground="Black">#FF33FFCC</Button>
+                    <Button Width="110" Height="60" Background="#FF00FFCC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click254" Foreground="Black">#FF00FFCC</Button>
+                    <Button Width="110" Height="60" Background="#FF33CCCC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click255" Foreground="Black">#FF33CCCC</Button>
+                    <Button Width="110" Height="60" Background="#FF009999" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click256" Foreground="Black">#FF009999</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S26" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF66CC99" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click261" Foreground="Black">#FF66CC99</Button>
+                    <Button Width="110" Height="60" Background="#FF33CC99" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click262" Foreground="Black">#FF33CC99</Button>
+                    <Button Width="110" Height="60" Background="#FF00CC99" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click263" Foreground="Black">#FF00CC99</Button>
+                    <Button Width="110" Height="60" Background="#FF339966" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click264" Foreground="Black">#FF339966</Button>
+                    <Button Width="110" Height="60" Background="#FF009966" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click265" Foreground="Black">#FF009966</Button>
+                    <Button Width="110" Height="60" Background="#FF006633" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click266" Foreground="Black">#FF006633</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S27" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF66FF99" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click271" Foreground="Black">#FF66FF99</Button>
+                    <Button Width="110" Height="60" Background="#FF33FF99" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click272" Foreground="Black">#FF33FF99</Button>
+                    <Button Width="110" Height="60" Background="#FF00FF99" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click273" Foreground="Black">#FF00FF99</Button>
+                    <Button Width="110" Height="60" Background="#FF33CC66" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click274" Foreground="Black">#FF33CC66</Button>
+                    <Button Width="110" Height="60" Background="#FF00CC66" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click275" Foreground="Black">#FF00CC66</Button>
+                    <Button Width="110" Height="60" Background="#FF009933" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click276" Foreground="Black">#FF009933</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S28" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF99FF99" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click281" Foreground="Black">#FF99FF99</Button>
+                    <Button Width="110" Height="60" Background="#FF66FF66" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click282" Foreground="Black">#FF66FF66</Button>
+                    <Button Width="110" Height="60" Background="#FF33FF66" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click283" Foreground="Black">#FF33FF66</Button>
+                    <Button Width="110" Height="60" Background="#FF00FF66" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click284" Foreground="Black">#FF00FF66</Button>
+                    <Button Width="110" Height="60" Background="#FF339933" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click285" Foreground="Black">#FF339933</Button>
+                    <Button Width="110" Height="60" Background="#FF006600" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click286" Foreground="Black">#FF006600</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S29" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFCCFFCC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click291" Foreground="Black">#FFCCFFCC</Button>
+                    <Button Width="110" Height="60" Background="#FF99CC99" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click292" Foreground="Black">#FF99CC99</Button>
+                    <Button Width="110" Height="60" Background="#FF66CC66" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click293" Foreground="Black">#FF66CC66</Button>
+                    <Button Width="110" Height="60" Background="#FF669966" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click294" Foreground="Black">#FF669966</Button>
+                    <Button Width="110" Height="60" Background="#FF336633" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click295" Foreground="Black">#FF336633</Button>
+                    <Button Width="110" Height="60" Background="#FF003300" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click296" Foreground="White">#FF003300</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S30" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF33FF33" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click301" Foreground="Black">#FF33FF33</Button>
+                    <Button Width="110" Height="60" Background="#FF00FF33" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click302" Foreground="Black">#FF00FF33</Button>
+                    <Button Width="110" Height="60" Background="#FF00FF00" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click303" Foreground="Black">#FF00FF00</Button>
+                    <Button Width="110" Height="60" Background="#FF00CC00" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click304" Foreground="Black">#FF00CC00</Button>
+                    <Button Width="110" Height="60" Background="#FF33CC33" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click305" Foreground="Black">#FF33CC33</Button>
+                    <Button Width="110" Height="60" Background="#FF00CC33" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click306" Foreground="Black">#FF00CC33</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S31" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF66FF00" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click311" Foreground="Black">#FF66FF00</Button>
+                    <Button Width="110" Height="60" Background="#FF66FF33" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click312" Foreground="Black">#FF66FF33</Button>
+                    <Button Width="110" Height="60" Background="#FF33FF00" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click313" Foreground="Black">#FF33FF00</Button>
+                    <Button Width="110" Height="60" Background="#FF33CC00" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click314" Foreground="Black">#FF33CC00</Button>
+                    <Button Width="110" Height="60" Background="#FF339900" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click315" Foreground="Black">#FF339900</Button>
+                    <Button Width="110" Height="60" Background="#FF009900" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click316" Foreground="Black">#FF009900</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S32" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFCCFF99" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click321" Foreground="Black">#FFCCFF99</Button>
+                    <Button Width="110" Height="60" Background="#FF99FF66" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click322" Foreground="Black">#FF99FF66</Button>
+                    <Button Width="110" Height="60" Background="#FF66CC00" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click323" Foreground="Black">#FF66CC00</Button>
+                    <Button Width="110" Height="60" Background="#FF66CC33" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click324" Foreground="Black">#FF66CC33</Button>
+                    <Button Width="110" Height="60" Background="#FF669933" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click325" Foreground="Black">#FF669933</Button>
+                    <Button Width="110" Height="60" Background="#FF336600" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click326" Foreground="Black">#FF336600</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S33" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FF99FF00" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click331" Foreground="Black">#FF99FF00</Button>
+                    <Button Width="110" Height="60" Background="#FF99FF33" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click332" Foreground="Black">#FF99FF33</Button>
+                    <Button Width="110" Height="60" Background="#FF99CC66" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click333" Foreground="Black">#FF99CC66</Button>
+                    <Button Width="110" Height="60" Background="#FF99CC00" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click334" Foreground="Black">#FF99CC00</Button>
+                    <Button Width="110" Height="60" Background="#FF99CC33" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click335" Foreground="Black">#FF99CC33</Button>
+                    <Button Width="110" Height="60" Background="#FF669900" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click336" Foreground="Black">#FF669900</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S34" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFCCFF66" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click341" Foreground="Black">#FFCCFF66</Button>
+                    <Button Width="110" Height="60" Background="#FFCCFF00" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click342" Foreground="Black">#FFCCFF00</Button>
+                    <Button Width="110" Height="60" Background="#FFCCFF33" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click343" Foreground="Black">#FFCCFF33</Button>
+                    <Button Width="110" Height="60" Background="#FFCCCC99" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click344" Foreground="Black">#FFCCCC99</Button>
+                    <Button Width="110" Height="60" Background="#FF666633" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click345" Foreground="Black">#FF666633</Button>
+                    <Button Width="110" Height="60" Background="#FF333300" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click346" Foreground="White">#FF333300</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S35" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFCCCC66" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click351" Foreground="Black">#FFCCCC66</Button>
+                    <Button Width="110" Height="60" Background="#FFCCCC33" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click352" Foreground="Black">#FFCCCC33</Button>
+                    <Button Width="110" Height="60" Background="#FF999966" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click353" Foreground="Black">#FF999966</Button>
+                    <Button Width="110" Height="60" Background="#FF999933" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click354" Foreground="Black">#FF999933</Button>
+                    <Button Width="110" Height="60" Background="#FF999900" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click355" Foreground="Black">#FF999900</Button>
+                    <Button Width="110" Height="60" Background="#FF666600" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click356" Foreground="Black">#FF666600</Button>
+                </StackPanel>
+
+                <StackPanel x:Name="S36" Orientation="Horizontal">
+                    <Button Width="110" Height="60" Background="#FFFFFFFF" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click361" Foreground="Black">#FFFFFFFF</Button>
+                    <Button Width="110" Height="60" Background="#FFCCCCCC" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click362" Foreground="Black">#FFCCCCCC</Button>
+                    <Button Width="110" Height="60" Background="#FF999999" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click363" Foreground="Black">#FF999999</Button>
+                    <Button Width="110" Height="60" Background="#FF666666" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click364" Foreground="Black">#FF666666</Button>
+                    <Button Width="110" Height="60" Background="#FF333333" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click365" Foreground="Black">#FF333333</Button>
+                    <Button Width="110" Height="60" Background="#FF000000" BorderThickness="0,0,0,0" FontStyle="Italic" Click="Button_Click366" Foreground="White">#FF000000</Button>
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Page>

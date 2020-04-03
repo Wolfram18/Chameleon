@@ -1,0 +1,114 @@
+﻿<Page
+    x:Class="Chameleon.OppositePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Chameleon"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background = "#FF1B1919">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Column="1" Fill="#FF262626"/>
+
+        <Border 
+            HorizontalAlignment="Center" 
+            Height="120" 
+            Padding="25,0,20,0"
+            Margin="0,20,0,0"
+            VerticalAlignment="Top" 
+            BorderThickness="5"
+            BorderBrush="#FF1B1919"
+            Width="730">
+            <TextBlock  
+            FontSize="16" 
+            Foreground="White"
+            TextWrapping="Wrap" 
+            FontStyle="Italic"
+            Text="Для того, чтобы увидеть противоположный цвет, выберите точку на палитре, а затем нажмите кнопку «Отобразить»"/>
+        </Border>
+
+        <Rectangle Grid.Column="1" Fill="Yellow" Visibility="Collapsed"/>
+
+        <ColorPicker 
+            x:Name="myColorPicker"
+            ColorSpectrumShape="Ring"
+            IsColorChannelTextInputVisible="True"
+            IsHexInputVisible="True" 
+            Margin="0,100,0,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch" 
+            CompositeMode="Inherit" 
+            IsColorPreviewVisible="True" 
+            Foreground="White" 
+            Opacity="0.97"/>
+
+        <Polygon 
+            Fill="Black"
+            Name="Up"
+            Points="0,650,0,50,650,50"    
+            Grid.Column="1"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Margin="50,30,50,0"/>
+        <TextBlock
+                    x:Name="TextBlock1"
+                    TextWrapping="Wrap" 
+                    Text="#FF000000"
+                    Visibility="Visible" 
+                    Grid.Column="1"
+                    Width="100" 
+                    Height="30"
+                    Margin="0,40,0,100" 
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Foreground="White" 
+                    FontWeight="Normal"
+                    FontStyle="Italic" 
+                    FontSize="22"/>
+        <TextBlock
+                    x:Name="TextBlock2"
+                    TextWrapping="Wrap" 
+                    Text="#FFFFFFFF"
+                    Visibility="Visible" 
+                    Grid.Column="1"
+                    HorizontalAlignment="Center" 
+                    Width="100" 
+                    Height="30"
+                    Margin="0,690,0,-650" 
+                    VerticalAlignment="Top"
+                    Foreground="White" 
+                    FontWeight="Normal"
+                    FontStyle="Italic" 
+                    FontSize="22"/>
+        <Polygon 
+            Name="Down"
+            Grid.Column="1" 
+            Fill="White"
+            Points="650,650,0,650,650,50"         
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Margin="50,30,50,0"/>
+
+        <Button 
+            Name="button1"
+            Content="Отобразить" 
+            Grid.Column="0" 
+            Click="confirmColor_Click" 
+            Margin="260,640,0,0"  
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Top" 
+            Width="130" 
+            BorderBrush="#FF090808"
+            Foreground="Black" 
+            RequestedTheme="Light" 
+            Background="#FF655F5F"/>
+
+
+    </Grid>
+</Page>

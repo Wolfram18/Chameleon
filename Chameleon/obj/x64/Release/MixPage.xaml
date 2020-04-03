@@ -1,0 +1,165 @@
+﻿<Page
+    x:Class="Chameleon.MixPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Chameleon"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background = "#FF1B1919">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Column="1" Fill="#FF262626"/>
+
+        <Border 
+            HorizontalAlignment="Center" 
+            Height="120" 
+            Padding="25,0,20,0"
+            Margin="0,20,0,0"
+            VerticalAlignment="Top" 
+            BorderThickness="5"
+            BorderBrush="#FF1B1919"
+            Width="730">
+            <TextBlock  
+            FontSize="16" 
+            Foreground="White"
+            TextWrapping="Wrap" 
+            FontStyle="Italic"
+            Text="Для того, чтобы увидеть результат смешивания, выберите первый цвет на палитре и нажмите кнопку «Первый цвет», затем выберите на палитре второй цвет и нажмите кнопку «Второй цвет»"/>
+        </Border>
+
+        <ColorPicker x:ConnectionId='2' 
+            x:Name="myColorPicker"
+            ColorSpectrumShape="Ring"
+            IsColorChannelTextInputVisible="True"
+            IsHexInputVisible="True" 
+            Margin="0,100,0,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch" 
+            CompositeMode="Inherit" 
+            IsColorPreviewVisible="True" 
+            Foreground="White" 
+            Opacity="0.97"/>
+
+        <StackPanel x:ConnectionId='3' 
+            x:Name="StackPanel1" 
+            Grid.Column="1" 
+            Margin="50,30,60,0" 
+            Orientation="Vertical"
+            Padding="0,0,0,0"
+            Background="#FF262626">
+            <Border x:ConnectionId='6' 
+                x:Name="Border1" 
+                Background="#FF262626"
+                Height="70" 
+                Margin="0,0,0,0"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch">
+                <TextBlock x:ConnectionId='14'
+                    x:Name="TextBlock2"
+                    TextWrapping="Wrap" 
+                    Text="#FF000000"
+                    Visibility="Visible" 
+                    Grid.Column="1"
+                    HorizontalAlignment="Left" 
+                    Width="195" 
+                    Height="30"
+                    Margin="30,35,0,8.4" 
+                    VerticalAlignment="Stretch"
+                    Foreground="White" 
+                    FontWeight="Normal"
+                    FontStyle="Italic" 
+                    FontSize="16"/>
+            </Border>
+            <Border x:ConnectionId='7' x:Name="Border2"
+                    Background="Black"
+                    Height="70" 
+                    Margin="0,0,0,0">
+            </Border>
+            <Border x:ConnectionId='8' x:Name="Border3"
+                    Background="#FF262626"
+                    Height="70" 
+                    Margin="0,0,0,0">
+                <TextBlock x:ConnectionId='13'
+                    x:Name="TextBlock3"
+                    TextWrapping="Wrap" 
+                    Text="#FFFFFFFF"
+                    Visibility="Visible" 
+                    Grid.Column="1"
+                    HorizontalAlignment="Left" 
+                    Width="195" 
+                    Height="30"
+                    Margin="30,35,0,8.4"
+                    Foreground="White"
+                    FontWeight="Normal"
+                    FontStyle="Italic" 
+                    FontSize="16"/>
+            </Border>
+            <Border x:ConnectionId='9' x:Name="Border4"
+                    Background="White"
+                    Height="70" 
+                    Margin="0,0,0,0">
+            </Border>
+            <Border x:ConnectionId='10' x:Name="Border5"
+                    Background="#FF262626"
+                    Height="70" 
+                    Margin="0,0,0,0">
+                <TextBlock x:ConnectionId='12'
+                    x:Name="TextBlock5"
+                    TextWrapping="Wrap" 
+                    Text="#FF7F7F7F"
+                    Visibility="Visible" 
+                    Grid.Column="1"
+                    HorizontalAlignment="Left" 
+                    Width="195" 
+                    Height="30"
+                    Margin="30,35,0,8.4"
+                    VerticalAlignment="Stretch"
+                    Foreground="White"
+                    FontWeight="Normal"
+                    FontStyle="Italic" 
+                    FontSize="16"/>
+            </Border>
+            <Border x:ConnectionId='11' x:Name="Border6"
+                    Background="#FF7F7F7F"
+                    Height="320" 
+                    Margin="0,0,0,0">
+            </Border>
+        </StackPanel>
+
+
+        <Button x:ConnectionId='4' 
+            Name="button1"
+            Content="Первый цвет" 
+            Grid.Column="0" 
+                                        
+            Margin="260,597,0,0" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Top" 
+            Width="130" 
+            BorderBrush="#FF090808"
+            Foreground="Black" 
+            RequestedTheme="Light" 
+            Background="#FF655F5F"/>
+
+        <Button x:ConnectionId='5' 
+            Name="button2"
+            Content="Второй цвет" 
+            Grid.Column="0" 
+                                        
+            Margin="260,640,0,0" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Top" 
+            Width="130" 
+            BorderBrush="#FF090808"
+            Foreground="Black" 
+            RequestedTheme="Light" 
+            Background="#FF655F5F"/>
+    </Grid>
+</Page>
+
