@@ -2,7 +2,7 @@
 ## Сolor mixing
 ![СolorMixing](Images/ColorMixing.png)
 ## Color combinations
-Web safe colors are formed by the combination of red, green and blue (RGB) hex values of 00, 33, 66, 99, CC, FF. This results with 6*6*6 = 216 colors.
+Web safe colors are formed by the combination of red, green and blue (RGB) hex values of 00, 33, 66, 99, CC, FF. This results with 6x6x6 = 216 colors.  
 Classic triadic - three colors spaced equaly apart on the color wheel.
 ![СolorCombinations1](Images/ColorCombinations1.png)
 ##
